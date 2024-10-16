@@ -9,13 +9,15 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault(); 
 
-        
         const whatsappNumber = "7558765703";
         const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-        
         window.open(whatsappLink, "_blank");
+    };
+
+    const handleCall = () => {
+        window.location.href = "tel:7558765703"; // This will open the dialer with the phone number
     };
 
     return (
@@ -58,6 +60,11 @@ const Contact = () => {
                     </div>
                     <button type="submit" className="btn btn-primary">Send Message</button>
                 </form>
+                
+               
+                <button style={{width : "80%" , margin:"10px 10px 10px 118px"}} onClick={handleCall} className="btn btn-secondary mt-3">
+                    Call Us
+                </button>
             </div>
         </div>
     );
