@@ -17,7 +17,7 @@ const Contact = () => {
     };
 
     const handleCall = () => {
-        window.location.href = "tel:7558765703"; // This will open the dialer with the phone number
+        window.location.href = "tel:7558765703";
     };
 
     return (
